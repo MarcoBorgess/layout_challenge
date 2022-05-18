@@ -2,6 +2,8 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+import 'floating_pics_widget.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -43,104 +45,37 @@ class _HomePageState extends State<HomePage> {
                 height: 50.h,
                 child: Stack(
                   children: [
-                    Positioned(
-                      top: 22.5.h,
-                      left: 52.5.w,
-                      child: RotationTransition(
-                        turns: const AlwaysStoppedAnimation(-15 / 360),
-                        child: Container(
-                          width: 48.w,
-                          height: 48.w,
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color.fromARGB(16, 0, 0, 0),
-                                spreadRadius: 1,
-                              ),
-                            ],
-                            color: Color(0xffFFE7AA),
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/char2.png'),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
+                    FloatingPics(
+                      posTop: 22.5.h,
+                      posLeft: 52.5.w,
+                      size: 48.w,
+                      angle: -15 / 360,
+                      bgColor: const Color(0xffFFE7AA),
+                      assetImage: 'assets/images/char2.png',
                     ),
-                    Positioned(
-                      top: 27.5.h,
-                      child: RotationTransition(
-                        turns: const AlwaysStoppedAnimation(15 / 360),
-                        child: Container(
-                          width: 30.w,
-                          height: 30.w,
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color.fromARGB(16, 0, 0, 0),
-                                spreadRadius: 1,
-                              ),
-                            ],
-                            color: Color(0xffEAD4FF),
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/char1.png'),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
+                    FloatingPics(
+                      posTop: 27.5.h,
+                      posLeft: 0,
+                      size: 30.w,
+                      angle: 15 / 360,
+                      bgColor: const Color(0xffEAD4FF),
+                      assetImage: 'assets/images/char1.png',
                     ),
-                    Positioned(
-                      top: 10.h,
-                      left: 15.w,
-                      child: RotationTransition(
-                        turns: const AlwaysStoppedAnimation(-15 / 360),
-                        child: Container(
-                          width: 25.w,
-                          height: 25.w,
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color.fromARGB(16, 0, 0, 0),
-                                spreadRadius: 1,
-                              ),
-                            ],
-                            color: Color(0xffFFDDDD),
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/char3.png'),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
+                    FloatingPics(
+                      posTop: 10.h,
+                      posLeft: 15.w,
+                      size: 25.w,
+                      angle: -15 / 360,
+                      bgColor: const Color(0xffFFDDDD),
+                      assetImage: 'assets/images/char3.png',
                     ),
-                    Positioned(
-                      top: 5.h,
-                      left: 50.w,
-                      child: RotationTransition(
-                        turns: const AlwaysStoppedAnimation(5 / 360),
-                        child: Container(
-                          width: 20.w,
-                          height: 20.w,
-                          decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(15)),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color.fromARGB(16, 0, 0, 0),
-                                spreadRadius: 1,
-                              ),
-                            ],
-                            color: Color(0xffE6D7B3),
-                            image: DecorationImage(
-                              image: AssetImage('assets/images/char4.png'),
-                              fit: BoxFit.fill,
-                            ),
-                          ),
-                        ),
-                      ),
+                    FloatingPics(
+                      posTop: 5.h,
+                      posLeft: 50.w,
+                      size: 20.w,
+                      angle: 5 / 360,
+                      bgColor: const Color(0xffE6D7B3),
+                      assetImage: 'assets/images/char4.png',
                     ),
                   ],
                 ),
